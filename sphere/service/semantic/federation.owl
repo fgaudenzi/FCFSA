@@ -1,0 +1,276 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:datacenter="http://pfc.org/semantic/schema/datacenter#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:federation="http://pfc.org/semantic/schema/federation#"
+    xmlns:hnode="http://pfc.org/semantic/schema/hnode#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#contractID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-0_Dom-2_CPU">
+    <hnode:CPUCores>1</hnode:CPUCores>
+    <hnode:CPUClock>10000</hnode:CPUClock>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vCPU"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#contractDateStart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#contractDateEnd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Cloud-1">
+    <datacenter:cloudHost>iridium.local</datacenter:cloudHost>
+    <datacenter:cloudServiceHost>xws.iridium.local</datacenter:cloudServiceHost>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#Datacenter"/>
+    <datacenter:serviceJID>admin@iridium.local/federation</datacenter:serviceJID>
+    <datacenter:servicePort>5222</datacenter:servicePort>
+    <datacenter:servicePwd>banana</datacenter:servicePwd>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#Community">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#hasLessor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/federation#federationContract"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/datacenter#Datacenter"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract-2">
+    <datacenter:contractCID>contract-5@cloud.Cloud-1</datacenter:contractCID>
+    <datacenter:leasesVNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-2"/>
+    <datacenter:leasesHNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0"/>
+    <datacenter:contractHasUser rdf:resource="http://pfc.org/semantic/schema/datacenter#User-2"/>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#User-2">
+    <datacenter:hasContract rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract-2"/>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#User"/>
+    <datacenter:userId>com1@cloud.Cloud-1</datacenter:userId>
+    <datacenter:userPassword>72B302BF297A228A75730123EFEF7C41</datacenter:userPassword>
+    <datacenter:hasContract rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract-1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-0_Dom-4_Memory">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vMemory"/>
+    <hnode:memorySize>128</hnode:memorySize>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#sharedContract-1">
+    <federation:hasInvitedUser rdf:resource="http://pfc.org/semantic/schema/datacenter#User-4"/>
+    <federation:hasContractInitiator rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract-1"/>
+    <federation:hasDatacenterLessor rdf:resource="http://pfc.org/semantic/schema/datacenter#Cloud-1"/>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/federation#sharedContract"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-0_Dom-2">
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-2_CPU"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-2_Storage"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-2_Memory"/>
+    <hnode:vNodeName>Server-0_Dom-2</hnode:vNodeName>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vNode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#hasSubShareContract">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/federation#sharedContract"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-0_Dom-1_CPU">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vCPU"/>
+    <hnode:CPUClock>10000</hnode:CPUClock>
+    <hnode:CPUCores>1</hnode:CPUCores>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#federationContract">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#hasCommunity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/federation#organization"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/datacenter#Community"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#hasUser">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/federation#Community"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/datacenter#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#Community-1">
+    <federation:hasCloud rdf:resource="http://pfc.org/semantic/schema/datacenter#Cloud-1"/>
+    <federation:hasCloud rdf:resource="http://pfc.org/semantic/schema/datacenter#Cloud-2"/>
+    <federation:hasUser rdf:resource="http://pfc.org/semantic/schema/datacenter#User-1"/>
+    <federation:hasUser rdf:resource="http://pfc.org/semantic/schema/datacenter#User-2"/>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/federation#Community"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#sharedContract">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#hasDatacenterLessor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#Datacenter"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/federation#sharedContract"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract-1">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+    <datacenter:contractCID>contract-4@cloud.Cloud-1</datacenter:contractCID>
+    <datacenter:contractDateStart>04/04/2010</datacenter:contractDateStart>
+    <datacenter:contractDateEnd></datacenter:contractDateEnd>
+    <datacenter:contractHasUser rdf:resource="http://pfc.org/semantic/schema/datacenter#User-2"/>
+    <datacenter:leasesVNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-1"/>
+    <datacenter:leasesHNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#User-3">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#User"/>
+    <datacenter:userId>com2@cloud.Cloud-2</datacenter:userId>
+    <datacenter:userPassword>72B302BF297A228A75730123EFEF7C41</datacenter:userPassword>
+    <datacenter:hasContract rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract-3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#organization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-0_Dom-2_Memory">
+    <hnode:memorySize>512</hnode:memorySize>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vMemory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-0_Dom-1_Memory">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vMemory"/>
+    <hnode:memorySize>512</hnode:memorySize>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#sharedContract-2">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/federation#sharedContract"/>
+    <federation:hasDatacenterLessor rdf:resource="http://pfc.org/semantic/schema/datacenter#Cloud-1"/>
+    <federation:hasContractInitiator rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract-2"/>
+    <federation:hasInvitedUser rdf:resource="http://pfc.org/semantic/schema/datacenter#User-4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-0_Dom-4_Storage">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vStorage"/>
+    <hnode:storageSize>500</hnode:storageSize>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#hasCloud">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/federation#Community"/>
+    <rdfs:range rdf:resource="http://pfc.org/ semantic/schema/datacenter#Datacenter"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#Community-2">
+    <federation:hasCloud rdf:resource="http://pfc.org/semantic/schema/datacenter#Cloud-1"/>
+    <federation:hasCloud rdf:resource="http://pfc.org/semantic/schema/datacenter#Cloud-2"/>
+    <federation:hasUser rdf:resource="http://pfc.org/semantic/schema/datacenter#User-3"/>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/federation#Community"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Cloud-2">
+    <datacenter:cloudHost>alpha.local</datacenter:cloudHost>
+    <datacenter:cloudServiceHost>xws.alpha.local</datacenter:cloudServiceHost>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#Datacenter"/>
+    <datacenter:serviceJID>admin@alpha.local/federation</datacenter:serviceJID>
+    <datacenter:servicePort>5222</datacenter:servicePort>
+    <datacenter:servicePwd>banana</datacenter:servicePwd>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#hasDatacenter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/federation#organization"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/datacenter#Datacenter"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-0_Dom-4">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vNode"/>
+    <hnode:vNodeName>Server-0_Dom-4</hnode:vNodeName>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-4_Memory"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-4_Storage"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-4_CPU"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#hasUserWaiting">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#User"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/federation#sharedContract"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#workStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-0_Dom-1_Storage">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vStorage"/>
+    <hnode:storageSize>10000</hnode:storageSize>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-0_Dom-2_Storage">
+    <hnode:storageSize>10000</hnode:storageSize>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vStorage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#hasLessee">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/federation#federationContract"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/datacenter#Datacenter"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#Organization-1">
+    <federation:hasDatacenter rdf:resource="http://pfc.org/semantic/schema/datacenter#Cloud-1"/>
+    <federation:hasDatacenter rdf:resource="http://pfc.org/semantic/schema/datacenter#Cloud-2"/>
+    <federation:hasCommunity rdf:resource="http://pfc.org/semantic/schema/federation#Community-1"/>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/federation#organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federated#organization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:imports rdf:resource="file:/Users/filippogaudenzi/Universita/Tesi/sourceFromG/sphere/service/semantic/datacenter-schema.owl"/>
+    <owl:imports rdf:resource="file:/Users/filippogaudenzi/Universita/Tesi/sourceFromG/sphere/service/semantic/hnode-schema.owl"/>
+    <rdfs:label></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#sharedContract-3">
+    <federation:hasInvitedUser rdf:resource="http://pfc.org/semantic/schema/datacenter#User-4"/>
+    <federation:hasContractInitiator rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract-3"/>
+    <federation:hasDatacenterLessor rdf:resource="http://pfc.org/semantic/schema/datacenter#Cloud-2"/>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/federation#sharedContract"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-0_Dom-4_CPU">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vCPU"/>
+    <hnode:CPUClock>500</hnode:CPUClock>
+    <hnode:CPUCores>1</hnode:CPUCores>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract-3">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+    <datacenter:contractCID>contract-7@cloud.Cloud-2</datacenter:contractCID>
+    <datacenter:contractDateStart>04/04/2010</datacenter:contractDateStart>
+    <datacenter:contractDateEnd></datacenter:contractDateEnd>
+    <datacenter:contractHasUser rdf:resource="http://pfc.org/semantic/schema/datacenter#User-3"/>
+    <datacenter:leasesVNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-4"/>
+    <datacenter:leasesHNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#User-4">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#User"/>
+    <datacenter:userId>com3@cloud.Cloud-1</datacenter:userId>
+    <datacenter:userPassword>72B302BF297A228A75730123EFEF7C41</datacenter:userPassword>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#Community-3">
+    <federation:hasCloud rdf:resource="http://pfc.org/semantic/schema/datacenter#Cloud-1"/>
+    <federation:hasCloud rdf:resource="http://pfc.org/semantic/schema/datacenter#Cloud-2"/>
+    <federation:hasUser rdf:resource="http://pfc.org/semantic/schema/datacenter#User-4"/>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/federation#Community"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#User-1">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#User"/>
+    <datacenter:userId>user1@cloud.Cloud-1</datacenter:userId>
+    <datacenter:userPassword>72B302BF297A228A75730123EFEF7C41</datacenter:userPassword>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-0_Dom-1">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vNode"/>
+    <hnode:vNodeName>Server-0_Dom-1</hnode:vNodeName>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-1_Memory"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-1_Storage"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-1_CPU"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#hasSubContract">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/federation#federationContract"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#hasContractInitiator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/federation#sharedContract"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-0">
+    <hnode:hasVNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-2"/>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#hNode"/>
+    <hnode:hasVNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-1"/>
+    <hnode:hasVNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/federation#hasInvitedUser">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#User"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/federation#sharedContract"/>
+  </rdf:Description>
+</rdf:RDF>

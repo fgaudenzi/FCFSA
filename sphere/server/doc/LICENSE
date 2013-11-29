@@ -1,0 +1,30 @@
+This official binary package of ejabberd is released by ProcessOne.
+
+Except as described below, the source code to ejabberd is available
+under the GNU General Public Licence (GPL) either version 2 of the
+License, or (at your option) any later version.
+
+The complete text of the GNU General Public Licence v2 can be found in
+the GPL file in the same directory as this file or consulted at
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.
+
+For the Microsoft Windows binary installer, see also the LICENSE.win
+file in the same directory as this file.
+
+For the MacOS binary installer, see also the LICENSE.macos file in the
+same directory as this file.
+
+Exceptions
+
+As a special exception, the authors give permission to link this program
+with the OpenSSL library and distribute the resulting binary.
+
+Depending on how it was compiled, your product distribution and
+version may include the following portions which are not
+available under the above terms:
+
+    * Image files containing the trademarks and logos of
+      ProcessOne, which may not be reproduced without
+      permission. (Copyright ©2001-2010 ProcessOne. All Rights
+      Reserved.)
+

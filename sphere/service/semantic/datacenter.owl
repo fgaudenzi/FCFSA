@@ -1,0 +1,376 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:datacenter="http://pfc.org/semantic/schema/datacenter#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:hnode="http://pfc.org/semantic/schema/hnode#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Command">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#hasUser">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#Datacenter"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/datacenter#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-3">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vNode"/>
+    <hnode:vNodeName>Server-1_Dom-3</hnode:vNodeName>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-3_Memory"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-3_Storage"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-3_CPU"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Cloud-1">
+    <datacenter:hasNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1"/>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#Datacenter"/>
+    <datacenter:hasUser rdf:resource="http://pfc.org/semantic/schema/datacenter#User-2"/>
+    <datacenter:hasUser rdf:resource="http://pfc.org/semantic/schema/datacenter#User-1"/>
+    <datacenter:hasUser rdf:resource="http://pfc.org/semantic/schema/datacenter#User-3"/>
+    <datacenter:cloudHost>host</datacenter:cloudHost>
+    <datacenter:cloudServiceHost>service.cloud1.pfc</datacenter:cloudServiceHost>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#leasesVNode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/hnode#vNode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#userType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#User"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract-10">
+    <datacenter:contractSharedStatus>invited</datacenter:contractSharedStatus>
+    <datacenter:contractCID>contract-7@cloud.Cloud-2</datacenter:contractCID>
+    <datacenter:contractDateStart>04/04/2010</datacenter:contractDateStart>
+    <datacenter:contractDateEnd>12/12/2012</datacenter:contractDateEnd>
+    <datacenter:contractType>remote</datacenter:contractType>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+    <datacenter:contractHasUser rdf:resource="http://pfc.org/semantic/schema/datacenter#User-3"/>
+    <datacenter:leasesHNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0"/>
+    <datacenter:leasesVNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#User-2">
+    <datacenter:userType>local</datacenter:userType>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#User"/>
+    <datacenter:userId>com1@cloud.Cloud-1</datacenter:userId>
+    <datacenter:userPassword>72B302BF297A228A75730123EFEF7C41</datacenter:userPassword>
+    <datacenter:hasContract rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract-4"/>
+    <datacenter:hasContract rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract-5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#hasBundleResource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#Bundle"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/hnode#vMemory"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/hnode#vCPU"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/hnode#vStorage"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/hnode#vNetwork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_physicalMemory">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#memory"/>
+    <hnode:memorySize>2000</hnode:memorySize>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#contractHasUser">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/datacenter#User"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Bundle-Standard">
+    <datacenter:bundleHourPrice>0.50</datacenter:bundleHourPrice>
+    <datacenter:bundleName>Standard</datacenter:bundleName>
+    <datacenter:hasBundleResource rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#Bundle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract-7">
+    <datacenter:leasesVNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-6"/>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+    <datacenter:contractCID>contract-7@cloud.Cloud-1</datacenter:contractCID>
+    <datacenter:contractDateStart>06/02/2011</datacenter:contractDateStart>
+    <datacenter:contractDateEnd>01/03/2014</datacenter:contractDateEnd>
+    <datacenter:contractType>local</datacenter:contractType>
+    <datacenter:contractHasUser rdf:resource="http://pfc.org/semantic/schema/datacenter#User-3"/>
+    <datacenter:leasesHNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1"/>
+    <datacenter:contractSharedStatus>none</datacenter:contractSharedStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#contractCID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_physicalCPU">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#CPU"/>
+    <hnode:CPUCores rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hnode:CPUCores>
+    <hnode:CPUClock rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2400</hnode:CPUClock>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Bundle-Standard_CPU">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vCPU"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-6_Storage">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vStorage"/>
+    <hnode:storageSize>10000</hnode:storageSize>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-3_Memory">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vMemory"/>
+    <hnode:memorySize>512</hnode:memorySize>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#datacenter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:imports rdf:resource="file:/Users/filippogaudenzi/Universita/Tesi/sourceFromG/sphere/service/semantic/hnode-schema.owl"/>
+    <rdfs:label></rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-0_Dom-1_CPU">
+    <hnode:CPUCores>1</hnode:CPUCores>
+    <hnode:CPUClock>10000</hnode:CPUClock>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vCPU"/>
+    <hnode:CPUClock>500</hnode:CPUClock>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#User">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_physicalStorage">
+    <hnode:storageSize>67000</hnode:storageSize>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#storage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#hasNode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#Datacenter"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/hnode#hNode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#leasesHNode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-2">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vNode"/>
+    <hnode:vNodeName>Server-1_Dom-2</hnode:vNodeName>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-2_Memory"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-2_Storage"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-2_CPU"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#userSession">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#cloudHost">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#contractType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-2_Storage">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vStorage"/>
+    <hnode:storageSize>10000</hnode:storageSize>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Command_Monitor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#hasContract">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#User"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#userId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#User"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#userPassword">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#User-3">
+    <datacenter:hasContract rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract-9"/>
+    <datacenter:hasContract rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract-8"/>
+    <datacenter:userId>com3@cloud.Cloud-1</datacenter:userId>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#User"/>
+    <datacenter:userType>local</datacenter:userType>
+    <datacenter:userPassword>72B302BF297A228A75730123EFEF7C41</datacenter:userPassword>
+    <datacenter:hasContract rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract-7"/>
+    <datacenter:hasContract rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract-10"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract-8">
+    <datacenter:leasesVNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-1"/>
+    <datacenter:leasesHNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0"/>
+    <datacenter:contractHasUser rdf:resource="http://pfc.org/semantic/schema/datacenter#User-3"/>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+    <datacenter:contractType>remote</datacenter:contractType>
+    <datacenter:contractDateStart>01/01/2010</datacenter:contractDateStart>
+    <datacenter:contractDateEnd>01/01/2012</datacenter:contractDateEnd>
+    <datacenter:contractCID>contract-4@cloud.Cloud-1</datacenter:contractCID>
+    <datacenter:contractSharedStatus>invited</datacenter:contractSharedStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#hasCommand">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#User"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#Bundle"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#HNode"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/datacenter#Command"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-0_Dom-1_Memory">
+    <hnode:memorySize>512</hnode:memorySize>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vMemory"/>
+    <hnode:memorySize>128</hnode:memorySize>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#contractDateStart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#bundleHourPrice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#Bundle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Bundle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Bundle-Standard_Storage">
+    <hnode:storageSize>5000</hnode:storageSize>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vStorage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract-4">
+    <datacenter:leasesVNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-2"/>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+    <datacenter:contractCID>contract-4@cloud.Cloud-1</datacenter:contractCID>
+    <datacenter:contractDateStart>01/01/2010</datacenter:contractDateStart>
+    <datacenter:contractDateEnd>01/01/2012</datacenter:contractDateEnd>
+    <datacenter:contractType>local</datacenter:contractType>
+    <datacenter:contractHasUser rdf:resource="http://pfc.org/semantic/schema/datacenter#User-2"/>
+    <datacenter:leasesHNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1"/>
+    <datacenter:contractSharedStatus>owner</datacenter:contractSharedStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-3_CPU">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vCPU"/>
+    <hnode:CPUClock>2400</hnode:CPUClock>
+    <hnode:CPUCores>1</hnode:CPUCores>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#cloudServiceHost">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#HNode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract-5">
+    <datacenter:contractSharedStatus>owner</datacenter:contractSharedStatus>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+    <datacenter:contractCID>contract-5@cloud.Cloud-1</datacenter:contractCID>
+    <datacenter:contractDateStart>01/01/2011</datacenter:contractDateStart>
+    <datacenter:contractDateEnd>01/01/2012</datacenter:contractDateEnd>
+    <datacenter:contractType>local</datacenter:contractType>
+    <datacenter:contractHasUser rdf:resource="http://pfc.org/semantic/schema/datacenter#User-2"/>
+    <datacenter:leasesHNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1"/>
+    <datacenter:leasesVNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1">
+    <hnode:hNodeHost>hnode1.cloud</hnode:hNodeHost>
+    <hnode:hasPhysicalResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_physicalStorage"/>
+    <hnode:hasPhysicalResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_physicalNetwork"/>
+    <hnode:hNodeServicePort>5222</hnode:hNodeServicePort>
+    <hnode:hasPhysicalResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_physicalCPU"/>
+    <hnode:hNodeServicePwd>banana</hnode:hNodeServicePwd>
+    <hnode:freeLocalStorage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">45000</hnode:freeLocalStorage>
+    <hnode:hNodeServiceHost>service.hnode1.cloud</hnode:hNodeServiceHost>
+    <hnode:freeMemory rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2000</hnode:freeMemory>
+    <hnode:hasPhysicalResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_physicalMemory"/>
+    <hnode:hNodeServiceJID>admin@hnode1.cloud/client</hnode:hNodeServiceJID>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#hNode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract-9">
+    <datacenter:leasesVNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-1"/>
+    <datacenter:leasesHNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0"/>
+    <datacenter:contractHasUser rdf:resource="http://pfc.org/semantic/schema/datacenter#User-3"/>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+    <datacenter:contractType>remote</datacenter:contractType>
+    <datacenter:contractDateEnd>01/01/2012</datacenter:contractDateEnd>
+    <datacenter:contractDateStart>01/01/2011</datacenter:contractDateStart>
+    <datacenter:contractCID>contract-5@cloud.Cloud-1</datacenter:contractCID>
+    <datacenter:contractSharedStatus>invited</datacenter:contractSharedStatus>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-0_Dom-1_Storage">
+    <hnode:storageSize>10000</hnode:storageSize>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vStorage"/>
+    <hnode:storageSize>500</hnode:storageSize>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#hasBundle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/datacenter#Bundle"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-2_CPU">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vCPU"/>
+    <hnode:CPUClock>2400</hnode:CPUClock>
+    <hnode:CPUCores>1</hnode:CPUCores>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-6_Memory">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vMemory"/>
+    <hnode:memorySize>512</hnode:memorySize>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-6">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vNode"/>
+    <hnode:vNodeName>Server-1_Dom-6</hnode:vNodeName>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-6_Memory"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-6_Storage"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-6_CPU"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#bundleName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#Bundle"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-3_Storage">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vStorage"/>
+    <hnode:storageSize>10000</hnode:storageSize>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#User-1">
+    <datacenter:userId>user1@cloud.Cloud-1</datacenter:userId>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/datacenter#User"/>
+    <datacenter:userType>local</datacenter:userType>
+    <datacenter:userPassword>72B302BF297A228A75730123EFEF7C41</datacenter:userPassword>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#hasMonitor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#Command"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/datacenter#Command_Monitor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_physicalNetwork">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#network"/>
+    <hnode:host>192.168.1.2</hnode:host>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-0_Dom-1">
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-1_CPU"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-1_Storage"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-0_Dom-1_Memory"/>
+    <hnode:vNodeName>Server-0_Dom-1</hnode:vNodeName>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vNode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-0">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#hNode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-6_CPU">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vCPU"/>
+    <hnode:CPUClock>2400</hnode:CPUClock>
+    <hnode:CPUCores>1</hnode:CPUCores>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-2_Memory">
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vMemory"/>
+    <hnode:memorySize>512</hnode:memorySize>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Datacenter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#contractDateEnd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/datacenter#Contract"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:datacenter="http://pfc.org/semantic/schema/datacenter#" xmlns:hnode="http://pfc.org/semantic/schema/hnode#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#datacenter">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Ontology"/>
+		</rdf:type>
+		<owl:imports>
+			<rdf:Description rdf:about="file:/Users/filippogaudenzi/Universita/Tesi/sourceFromG/sphere/service/semantic/hnode.owl"/>
+		</owl:imports>
+		<rdfs:label/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Datacenter">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#hasNode">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Datacenter"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#hNode"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#HNode">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#User">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#hasUser">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Datacenter"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#User"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#userId">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#User"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#userType">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#User"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#hasContract">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#User"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#contractType">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#contractCID">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#contractDateStart">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#contractDateEnd">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Bundle">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#hasBundle">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Bundle"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#bundleName">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Bundle"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#bundleHourPrice">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Bundle"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#leasesVNode">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#vNode"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#hasBundleResource">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Bundle"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#vMemory"/>
+		</rdfs:range>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#vCPU"/>
+		</rdfs:range>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#vStorage"/>
+		</rdfs:range>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#vNetwork"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Command">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Command_Monitor">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#hasMonitor">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Command"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Command_Monitor"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#hasCommand">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#User"/>
+		</rdfs:domain>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract"/>
+		</rdfs:domain>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Bundle"/>
+		</rdfs:domain>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#HNode"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Command"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Cloud-1">
+		<datacenter:hasNode>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1"/>
+		</datacenter:hasNode>
+		<rdf:type>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Datacenter"/>
+		</rdf:type>
+		<datacenter:hasUser>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#User-1"/>
+		</datacenter:hasUser>
+		<datacenter:cloudHost>host</datacenter:cloudHost>
+		<datacenter:cloudServiceHost>service.cloud1.pfc</datacenter:cloudServiceHost>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#User-1">
+		<datacenter:userPassword>72B302BF297A228A75730123EFEF7C41</datacenter:userPassword>
+		<datacenter:userId>user1@cloud.cloud1</datacenter:userId>
+		<datacenter:userType>local</datacenter:userType>
+		<datacenter:hasContract>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract-1"/>
+		</datacenter:hasContract>
+		<rdf:type>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#User"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#userPassword">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract-1">
+		<datacenter:contractCID>1</datacenter:contractCID>
+		<datacenter:contractDateEnd>12/12/2012</datacenter:contractDateEnd>
+		<datacenter:contractDateStart>12/12/2010</datacenter:contractDateStart>
+		<datacenter:contractType>local</datacenter:contractType>
+		<datacenter:leasesVNode>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-1"/>
+		</datacenter:leasesVNode>
+		<datacenter:leasesHNode>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1"/>
+		</datacenter:leasesHNode>
+		<datacenter:contractHasUser>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#User-1"/>
+		</datacenter:contractHasUser>
+		<rdf:type>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Bundle-Standard">
+		<datacenter:bundleHourPrice>0.50</datacenter:bundleHourPrice>
+		<datacenter:bundleName>Standard</datacenter:bundleName>
+		<datacenter:hasBundleResource>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+		</datacenter:hasBundleResource>
+		<rdf:type>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Bundle"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Bundle-Standard_Storage">
+		<hnode:storageSize>5000</hnode:storageSize>
+		<rdf:type>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#vStorage"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#userSession">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#leasesHNode">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#contractHasUser">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Contract"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#User"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#Bundle-Standard_CPU">
+		<rdf:type>
+			<rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#vCPU"/>
+		</rdf:type>
+	</rdf:Description>
+
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#cloudServiceHost">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		</rdf:type>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://pfc.org/semantic/schema/datacenter#cloudHost">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		</rdf:type>
+	</rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,22 @@
+The MacOS binary installer includes the prefPane product.
+
+The official binaries of prefPane are released by ProcessOne.
+
+Except as described below, all of the source code to prefPane is
+available under the Mozilla Public Licence (MPL).
+
+The complete text of the Mozilla Public License can be found in
+the MPL file in the same directory as this file or consulted at
+http://www.mozilla.org/MPL/MPL-1.1.html.
+
+Exceptions
+
+Depending on how it was compiled, your prefPane distribution and
+version may include the following portions which are not
+available under the above terms:
+
+    * Image files containing the trademarks and logos of
+      ProcessOne, which may not be reproduced without
+      permission. (Copyright ©2001-2010 ProcessOne. All Rights
+      Reserved.)
+

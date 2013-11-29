@@ -1,0 +1,670 @@
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:50 ===
+          supervisor: {local,sasl_safe_sup}
+             started: [{pid,<0.45.0>},
+                       {name,alarm_handler},
+                       {mfa,{alarm_handler,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:50 ===
+          supervisor: {local,sasl_safe_sup}
+             started: [{pid,<0.46.0>},
+                       {name,overload},
+                       {mfa,{overload,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:50 ===
+          supervisor: {local,sasl_sup}
+             started: [{pid,<0.44.0>},
+                       {name,sasl_safe_sup},
+                       {mfa,
+                           {supervisor,start_link,
+                               [{local,sasl_safe_sup},sasl,safe]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:50 ===
+          supervisor: {local,sasl_sup}
+             started: [{pid,<0.47.0>},
+                       {name,release_handler},
+                       {mfa,{release_handler,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:50 ===
+         application: sasl
+          started_at: ejabberd@localhost
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:50 ===
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.51.0>},
+                       {name,dets_sup},
+                       {mfa,{dets_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:50 ===
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.52.0>},
+                       {name,dets},
+                       {mfa,{dets_server,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:50 ===
+          supervisor: {local,mnesia_sup}
+             started: [{pid,<0.60.0>},
+                       {name,mnesia_event},
+                       {mfa,{mnesia_sup,start_event,[]}},
+                       {restart_type,permanent},
+                       {shutdown,30000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:50 ===
+          supervisor: {local,mnesia_kernel_sup}
+             started: [{pid,<0.62.0>},
+                       {name,mnesia_monitor},
+                       {mfa,{mnesia_monitor,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,3000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:50 ===
+          supervisor: {local,mnesia_kernel_sup}
+             started: [{pid,<0.63.0>},
+                       {name,mnesia_subscr},
+                       {mfa,{mnesia_subscr,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,3000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:50 ===
+          supervisor: {local,mnesia_kernel_sup}
+             started: [{pid,<0.64.0>},
+                       {name,mnesia_locker},
+                       {mfa,{mnesia_locker,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,3000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:50 ===
+          supervisor: {local,mnesia_kernel_sup}
+             started: [{pid,<0.65.0>},
+                       {name,mnesia_recover},
+                       {mfa,{mnesia_recover,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,180000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:50 ===
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.70.0>},
+                       {name,disk_log_sup},
+                       {mfa,{disk_log_sup,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:50 ===
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.71.0>},
+                       {name,disk_log_server},
+                       {mfa,{disk_log_server,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:51 ===
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.82.0>},
+                       {name,timer_server},
+                       {mfa,{timer,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:51 ===
+          supervisor: {local,mnesia_kernel_sup}
+             started: [{pid,<0.66.0>},
+                       {name,mnesia_tm},
+                       {mfa,{mnesia_tm,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,30000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:51 ===
+          supervisor: {local,mnesia_kernel_sup}
+             started: [{pid,<0.83.0>},
+                       {name,mnesia_checkpoint_sup},
+                       {mfa,{mnesia_checkpoint_sup,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:51 ===
+          supervisor: {local,mnesia_kernel_sup}
+             started: [{pid,<0.84.0>},
+                       {name,mnesia_snmp_sup},
+                       {mfa,{mnesia_snmp_sup,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:51 ===
+          supervisor: {local,mnesia_kernel_sup}
+             started: [{pid,<0.85.0>},
+                       {name,mnesia_controller},
+                       {mfa,{mnesia_controller,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,3000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:51 ===
+          supervisor: {local,mnesia_kernel_sup}
+             started: [{pid,<0.86.0>},
+                       {name,mnesia_late_loader},
+                       {mfa,{mnesia_late_loader,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,3000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:51 ===
+          supervisor: {local,mnesia_sup}
+             started: [{pid,<0.61.0>},
+                       {name,mnesia_kernel_sup},
+                       {mfa,{mnesia_kernel_sup,start,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:51 ===
+         application: mnesia
+          started_at: ejabberd@localhost
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:51 ===
+          supervisor: {local,crypto_sup}
+             started: [{pid,<0.192.0>},
+                       {name,crypto_server},
+                       {mfa,{crypto_server,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,2000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:51 ===
+         application: crypto
+          started_at: ejabberd@localhost
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:51 ===
+          supervisor: {local,stringprep_sup}
+             started: [{pid,<0.194.0>},
+                       {name,stringprep},
+                       {mfa,{stringprep,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.229.0>},
+                       {name,ejabberd_hooks},
+                       {mfa,{ejabberd_hooks,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,kernel_safe_sup}
+             started: [{pid,<0.231.0>},
+                       {name,pg2},
+                       {mfa,{pg2,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.230.0>},
+                       {name,ejabberd_node_groups},
+                       {mfa,{ejabberd_node_groups,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.232.0>},
+                       {name,ejabberd_system_monitor},
+                       {mfa,{ejabberd_system_monitor,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.233.0>},
+                       {name,ejabberd_router},
+                       {mfa,{ejabberd_router,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.236.0>},
+                       {name,ejabberd_sm},
+                       {mfa,{ejabberd_sm,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.243.0>},
+                       {name,ejabberd_s2s},
+                       {mfa,{ejabberd_s2s,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.246.0>},
+                       {name,ejabberd_local},
+                       {mfa,{ejabberd_local,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.249.0>},
+                       {name,ejabberd_captcha},
+                       {mfa,{ejabberd_captcha,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.252.0>},
+                       {name,ejabberd_receiver_sup},
+                       {mfa,
+                           {ejabberd_tmp_sup,start_link,
+                               [ejabberd_receiver_sup,ejabberd_receiver]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.253.0>},
+                       {name,ejabberd_c2s_sup},
+                       {mfa,
+                           {ejabberd_tmp_sup,start_link,
+                               [ejabberd_c2s_sup,ejabberd_c2s]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.254.0>},
+                       {name,ejabberd_s2s_in_sup},
+                       {mfa,
+                           {ejabberd_tmp_sup,start_link,
+                               [ejabberd_s2s_in_sup,ejabberd_s2s_in]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.255.0>},
+                       {name,ejabberd_s2s_out_sup},
+                       {mfa,
+                           {ejabberd_tmp_sup,start_link,
+                               [ejabberd_s2s_out_sup,ejabberd_s2s_out]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.256.0>},
+                       {name,ejabberd_service_sup},
+                       {mfa,
+                           {ejabberd_tmp_sup,start_link,
+                               [ejabberd_service_sup,ejabberd_service]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.257.0>},
+                       {name,ejabberd_http_sup},
+                       {mfa,
+                           {ejabberd_tmp_sup,start_link,
+                               [ejabberd_http_sup,ejabberd_http]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.258.0>},
+                       {name,ejabberd_http_poll_sup},
+                       {mfa,
+                           {ejabberd_tmp_sup,start_link,
+                               [ejabberd_http_poll_sup,ejabberd_http_poll]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.259.0>},
+                       {name,ejabberd_iq_sup},
+                       {mfa,
+                           {ejabberd_tmp_sup,start_link,
+                               [ejabberd_iq_sup,gen_iq_handler]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.260.0>},
+                       {name,ejabberd_stun_sup},
+                       {mfa,
+                           {ejabberd_tmp_sup,start_link,
+                               [ejabberd_stun_sup,ejabberd_stun]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.261.0>},
+                       {name,ejabberd_frontend_socket_sup},
+                       {mfa,
+                           {ejabberd_tmp_sup,start_link,
+                               [ejabberd_frontend_socket_sup,
+                                ejabberd_frontend_socket]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.262.0>},
+                       {name,ejabberd_listener},
+                       {mfa,{ejabberd_listener,start_link,[]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.270.0>},
+                       {name,'ejabberd_mod_caps_iridium.local'},
+                       {mfa,{mod_caps,start_link,["iridium.local",[]]}},
+                       {restart_type,transient},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.278.0>},
+                       {name,ejabberd_http_bind_sup},
+                       {mfa,
+                           {ejabberd_tmp_sup,start_link,
+                               [ejabberd_http_bind_sup,ejabberd_http_bind]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.279.0>},
+                       {name,'ejabberd_mod_irc_sup_iridium.local'},
+                       {mfa,
+                           {ejabberd_tmp_sup,start_link,
+                               ['ejabberd_mod_irc_sup_iridium.local',
+                                mod_irc_connection]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.280.0>},
+                       {name,'ejabberd_mod_irc_iridium.local'},
+                       {mfa,{mod_irc,start_link,["iridium.local",[]]}},
+                       {restart_type,temporary},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.286.0>},
+                       {name,'ejabberd_mod_muc_sup_iridium.local'},
+                       {mfa,
+                           {ejabberd_tmp_sup,start_link,
+                               ['ejabberd_mod_muc_sup_iridium.local',
+                                mod_muc_room]}},
+                       {restart_type,permanent},
+                       {shutdown,infinity},
+                       {child_type,supervisor}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.287.0>},
+                       {name,'ejabberd_mod_muc_iridium.local'},
+                       {mfa,{mod_muc,start_link,
+                                     ["iridium.local",
+                                      [{access,muc},
+                                       {access_create,muc_create},
+                                       {access_persistent,muc_create},
+                                       {access_admin,muc_admin}]]}},
+                       {restart_type,temporary},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_sup}
+             started: [{pid,<0.299.0>},
+                       {name,'ejabberd_mod_pubsub_iridium.local'},
+                       {mfa,
+                           {mod_pubsub,start_link,
+                               ["iridium.local",
+                                [{access_createnode,pubsub_createnode},
+                                 {ignore_pep_from_offline,true},
+                                 {last_item_cache,false},
+                                 {plugins,["flat","hometree","pep"]}]]}},
+                       {restart_type,transient},
+                       {shutdown,1000},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_listeners}
+             started: [{pid,<0.351.0>},
+                       {name,{5222,{0,0,0,0},tcp}},
+                       {mfa,
+                           {ejabberd_listener,start,
+                               [{5222,{0,0,0,0},tcp},
+                                ejabberd_c2s,
+                                [{certfile,
+                                     "/Users/filippogaudenzi/Universita/Tesi/sourceFromG/sphere/server/conf/server.pem"},
+                                 starttls,
+                                 {access,c2s},
+                                 {shaper,c2s_shaper},
+                                 {max_stanza_size,65536}]]}},
+                       {restart_type,transient},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_listeners}
+             started: [{pid,<0.352.0>},
+                       {name,{5269,{0,0,0,0},tcp}},
+                       {mfa,
+                           {ejabberd_listener,start,
+                               [{5269,{0,0,0,0},tcp},
+                                ejabberd_s2s_in,
+                                [{shaper,s2s_shaper},
+                                 {max_stanza_size,131072}]]}},
+                       {restart_type,transient},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+=PROGRESS REPORT==== 27-Nov-2013::22:49:52 ===
+          supervisor: {local,ejabberd_listeners}
+             started: [{pid,<0.353.0>},
+                       {name,{5280,{0,0,0,0},tcp}},
+                       {mfa,
+                           {ejabberd_listener,start,
+                               [{5280,{0,0,0,0},tcp},
+                                ejabberd_http,
+                                [captcha,http_bind,http_poll,web_admin]]}},
+                       {restart_type,transient},
+                       {shutdown,brutal_kill},
+                       {child_type,worker}]
+
+=CRASH REPORT==== 27-Nov-2013::22:49:52 ===
+  crasher:
+    pid: <0.354.0>
+    registered_name: []
+    exception throw: {eaddrinuse,{7654,{0,0,0,0},tcp}}
+      in function  ejabberd_listener:socket_error/6
+    initial call: ejabberd_listener:init({7654,{0,0,0,0},tcp},
+                                         ejabberd_service,
+                                         [{host,"fed.iridium.local",
+                                           [{password,"banana"}]}])
+    ancestors: [ejabberd_listeners,ejabberd_sup,<0.36.0>]
+    messages: []
+    links: [<0.262.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 23
+    reductions: 444
+  neighbours:
+
+=CRASH REPORT==== 27-Nov-2013::22:49:52 ===
+  crasher:
+    pid: <0.35.0>
+    registered_name: []
+    exception exit: {bad_return,
+                     {{ejabberd_app,start,[normal,[]]},
+                      {{eaddrinuse,{7654,{0,0,0,0},tcp}},
+                       {child,undefined,
+                        {7654,{0,0,0,0},tcp},
+                        {ejabberd_listener,start,
+                         [{7654,{0,0,0,0},tcp},
+                          ejabberd_service,
+                          [{host,"fed.iridium.local",[{password,"banana"}]}]]},
+                        transient,brutal_kill,worker,
+                        [ejabberd_listener]}}}}
+      in function  application_master:init/4
+    initial call: application_master:init(<0.5.0>,<0.34.0>,
+                                          {appl_data,ejabberd,
+                                           [ejabberd,ejabberd_sup,
+                                            ejabberd_auth,ejabberd_router,
+                                            ejabberd_sm,ejabberd_s2s,
+                                            ejabberd_local,ejabberd_listeners,
+                                            ejabberd_iq_sup,
+                                            ejabberd_service_sup,
+                                            ejabberd_s2s_out_sup,
+                                            ejabberd_s2s_in_sup,
+                                            ejabberd_c2s_sup,
+                                            ejabberd_mod_roster,
+                                            ejabberd_mod_echo,
+                                            ejabberd_mod_pubsub,
+                                            ejabberd_mod_irc,ejabberd_mod_muc,
+                                            ejabberd_offline,random_generator],
+                                           undefined,
+                                           {ejabberd_app,[]},
+                                           [acl,adhoc,configure,
+                                            cyrsasl_anonymous,cyrsasl,
+                                            cyrsasl_digest,cyrsasl_plain,
+                                            ejabberd_admin,ejabberd_app,
+                                            ejabberd_auth_anonymous,
+                                            ejabberd_auth,
+                                            ejabberd_auth_external,
+                                            ejabberd_auth_internal,
+                                            ejabberd_auth_ldap,
+                                            ejabberd_auth_odbc,
+                                            ejabberd_auth_pam,ejabberd,
+                                            ejabberd_c2s,ejabberd_c2s_config,
+                                            ejabberd_config,ejabberd_ctl,
+                                            ejabberd_frontend_socket,
+                                            ejabberd_hooks,ejabberd_http,
+                                            ejabberd_http_bind,
+                                            ejabberd_http_poll,
+                                            ejabberd_listener,ejabberd_local,
+                                            ejabberd_logger_h,
+                                            ejabberd_loglevel,
+                                            ejabberd_node_groups,
+                                            ejabberd_rdbms,ejabberd_receiver,
+                                            ejabberd_router,ejabberd_s2s,
+                                            ejabberd_s2s_in,ejabberd_s2s_out,
+                                            ejabberd_service,ejabberd_sm,
+                                            ejabberd_socket,ejabberd_sup,
+                                            ejabberd_system_monitor,
+                                            ejabberd_tmp_sup,ejabberd_update,
+                                            ejabberd_web_admin,ejabberd_web,
+                                            ejabberd_zlib,ejd2odbc,eldap,
+                                            eldap_filter,eldap_pool,
+                                            eldap_utils,'ELDAPv3',extauth,
+                                            gen_iq_handler,gen_mod,
+                                            gen_pubsub_node,
+                                            gen_pubsub_nodetree,iconv,idna,
+                                            jd2ejd,jlib,mod_adhoc,
+                                            mod_announce,mod_caps,
+                                            mod_configure2,mod_configure,
+                                            mod_disco,mod_echo,mod_http_bind,
+                                            mod_http_fileserver,mod_irc,
+                                            mod_irc_connection,mod_last,
+                                            mod_last_odbc,mod_muc,mod_muc_log,
+                                            mod_muc_room,mod_offline,
+                                            mod_offline_odbc,mod_privacy,
+                                            mod_privacy_odbc,mod_private,
+                                            mod_private_odbc,mod_proxy65,
+                                            mod_proxy65_lib,
+                                            mod_proxy65_service,
+                                            mod_proxy65_sm,mod_proxy65_stream,
+                                            mod_pubsub,mod_register,
+                                            mod_roster,mod_roster_odbc,
+                                            mod_service_log,mod_shared_roster,
+                                            mod_stats,mod_time,mod_vcard,
+                                            mod_vcard_ldap,mod_vcard_odbc,
+                                            mod_version,node_buddy,node_club,
+                                            node_default,node_dispatch,
+                                            node_pep,node_private,node_public,
+                                            nodetree_default,nodetree_virtual,
+                                            p1_fsm,p1_mnesia,p1_prof,randoms,
+                                            sha,shaper,stringprep,
+                                            stringprep_sup,tls,translate,xml,
+                                            xml_stream,'XmppAddr'],
+                                           [],infinity,infinity},
+                                          normal)
+    ancestors: [<0.34.0>]
+    messages: [{'EXIT',<0.36.0>,normal}]
+    links: [<0.34.0>,<0.5.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 23
+    reductions: 170
+  neighbours:

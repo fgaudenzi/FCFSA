@@ -1,0 +1,38 @@
+#!/bin/sh
+
+ROOTDIR=/Users/xhen/sphere/server
+export ROOTDIR
+BINDIR=$ROOTDIR/bin
+export BINDIR
+EMU=beam
+export EMU
+PROGNAME=$BINDIR/erl
+export PROGNAME
+PATH=$BINDIR:$PATH
+export PATH
+
+arch() {
+    case `uname -m` in
+    i[3456]86 ) echo x86 ;;
+    i86pc) echo x86 ;;
+    x86) echo x86 ;;
+    x86_64) echo amd64 ;;
+    ppc) echo powerpc ;;
+    arm*b) echo armeb ;;
+    arm*) echo arm ;;
+    * ) echo `uname -p | tr [A-Z] [a-z]` ;;
+    esac
+}
+
+os=`uname -s | tr [A-Z] [a-z]`
+cpu=`arch`
+ARCHDIR=${os}-${cpu}
+export ARCHDIR
+
+# Dynamic libraries
+LD_LIBRARY_PATH=$ROOTDIR/lib/$ARCHDIR
+export LD_LIBRARY_PATH
+DYLD_LIBRARY_PATH=$LD_LIBRARY_PATH
+export DYLD_LIBRARY_PATH
+
+exec $BINDIR/erlexec ${1+"$@"}

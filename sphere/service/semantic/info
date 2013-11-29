@@ -1,0 +1,17 @@
+vm-param-list
+xe vm-param-get param-name=start-time uuid=a1391e87-3e5c-fe24-192f-e9a0dbfb6f69 
+ memory-actual
+  start-time 
+  VCPUs-utilisation 
+  
+  
+  //memory
+  xe vm-param-get param-name=memory-actual uuid=[VID]
+  //cpu
+  xe vm-param-get param-name=VCPUs-utilisation  uuid=[VID]
+  //disk
+  xe vbd-list vm-uuid=<UUID> |grep vdi-uuid |cut -d\: -f2
+  
+  
+   virtual-size ( RO): 21474836480 //all size
+    physical-utilisation ( RO): 924570112 //utilization

@@ -1,0 +1,364 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:hnode="http://pfc.org/semantic/schema/hnode#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-3_Memory">
+    <hnode:memorySize>1</hnode:memorySize>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vMemory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-1">
+    <hnode:vNodeID>1c27cef5-2e45-5727-15f8-c5e3d323f714</hnode:vNodeID>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-1_CPU"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-1_Storage"/>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vNode"/>
+    <hnode:hasCommand rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Cmd-State"/>
+    <hnode:hasCommand rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Cmd-Start"/>
+    <hnode:hasCommand rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Cmd-Delete"/>
+    <hnode:hasCommand rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Cmd-Shutdown"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-1_Network"/>
+    <hnode:hasCommand rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Cmd-CreateVM"/>
+    <hnode:vNodeName>Dom1</hnode:vNodeName>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-1_Memory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#hNodeServicePort">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#storageMountPoint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#storage"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#vStorage"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#vNode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#commandTerminal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#command"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-1_Network">
+    <hnode:host>10.1.1.11</hnode:host>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vNetwork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#freeMemory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#hNode"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#vCPU">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://pfc.org/semantic/schema/hnode#virtualResource"/>
+    <rdfs:subClassOf rdf:resource="http://pfc.org/semantic/schema/hnode#CPU"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_physicalMemory">
+    <hnode:memorySize>2000</hnode:memorySize>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#memory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#vStorage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://pfc.org/semantic/schema/hnode#virtualResource"/>
+    <rdfs:subClassOf rdf:resource="http://pfc.org/semantic/schema/hnode#storage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_physicalCPU">
+    <hnode:CPUClock rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2400</hnode:CPUClock>
+    <hnode:CPUCores rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hnode:CPUCores>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#CPU"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#hasVirtualResource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#vNode"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/hnode#vCPU"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/hnode#vNetwork"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/hnode#vStorage"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/hnode#vMemory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#resource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#qosMetric">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-2_Network">
+    <hnode:host>10.1.1.3</hnode:host>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vNetwork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Cmd-Delete">
+    <hnode:commandName>Status</hnode:commandName>
+    <hnode:commandTerminal>xe vm-destroy uuid=[VID]</hnode:commandTerminal>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#command"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_physicalStorage">
+    <hnode:storageMountPoint>/dev/sda</hnode:storageMountPoint>
+    <hnode:storageSize>10000</hnode:storageSize>
+    <hnode:storageSize></hnode:storageSize>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#storage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Cmd-Start">
+    <hnode:commandName>Start_Dom1</hnode:commandName>
+    <hnode:commandTerminal>xe vm-start vm=[VID] &amp;&amp; xe vm-list params=power-state uuid=[VID] --minimal</hnode:commandTerminal>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#command"/>
+    <hnode:hasMonitor rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-1_Cmd-Start-Mon-1"/>
+    <hnode:hasMonitor rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-1_Cmd-Start-Mon-2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#commandMonitor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://pfc.org/semantic/schema/hnode#command"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#node">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#virtualResource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://pfc.org/semantic/schema/hnode#physicalResource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-2">
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-2_Network"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-2_Storage"/>
+    <hnode:hasCommand rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Cmd-Delete"/>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vNode"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-2_CPU"/>
+    <hnode:vNodeID>a1391e87-3e5c-fe24-192f-e9a0dbfb6f69</hnode:vNodeID>
+    <hnode:vNodeName>Dom2</hnode:vNodeName>
+    <hnode:hasCommand rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Cmd-Start"/>
+    <hnode:hasCommand rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Cmd-State"/>
+    <hnode:hasCommand rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Cmd-Shutdown"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#hasVNode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#hNode"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/hnode#vNode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Cmd-CreateVM">
+    <hnode:commandName>CreateVM</hnode:commandName>
+    <hnode:commandTerminal>xe vm-install template=[TEMP] new-name-label=[NAME]</hnode:commandTerminal>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#command"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#storageSize">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#storage"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#vStorage"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#memory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-2_Storage">
+    <hnode:storageMountPoint>/dev/sda1</hnode:storageMountPoint>
+    <hnode:storageSize>1000</hnode:storageSize>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vStorage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#CPUClock">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#vCPU"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#CPU"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#network">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://pfc.org/semantic/schema/hnode#physicalResource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#hasCommand">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#resource"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/hnode#command"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#vNetwork">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://pfc.org/semantic/schema/hnode#network"/>
+    <rdfs:subClassOf rdf:resource="http://pfc.org/semantic/schema/hnode#virtualResource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-1_Cmd-Start-Mon-1">
+    <hnode:Command_Monitoring_Result>0</hnode:Command_Monitoring_Result>
+    <hnode:Command_Monitoring_Timestamp>2001-10-26T21:32:52+02:00</hnode:Command_Monitoring_Timestamp>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#commandMonitor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#metric">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://pfc.org/semantic/schema/hnode#qosMetric"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#hnode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Command_Monitoring_Result">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#commandMonitor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#hNodeServiceHost">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#hasMonitor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#command"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/hnode#commandMonitor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#hNodeHost">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Cmd-State">
+    <hnode:commandName>Status</hnode:commandName>
+    <hnode:commandTerminal>xe vm-list params=power-state uuid=[VID] --minimal</hnode:commandTerminal>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#command"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-1_Memory">
+    <hnode:memorySize>1000</hnode:memorySize>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vMemory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#memorySize">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#memory"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#vMemory"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#hasPhysicalResource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#hNode"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/hnode#CPU"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/hnode#network"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/hnode#storage"/>
+    <rdfs:range rdf:resource="http://pfc.org/semantic/schema/hnode#memory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-3">
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-3_CPU"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-3_Storage"/>
+    <hnode:hasVirtualResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-3_Memory"/>
+    <hnode:vNodeName>_Dom-81</hnode:vNodeName>
+    <hnode:vNodeID>d0e9bc37-6aa3-d5e3-6232-08b3106dce47</hnode:vNodeID>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vNode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#physicalResource">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://pfc.org/semantic/schema/hnode#resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#CPUCores">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#vCPU"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#CPU"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#short"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-1_Cmd-Start-Mon-2">
+    <hnode:Command_Monitoring_Result>0</hnode:Command_Monitoring_Result>
+    <hnode:Command_Monitoring_Timestamp>2010-10-21T14:32:52+02:00</hnode:Command_Monitoring_Timestamp>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#commandMonitor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-1_Storage">
+    <hnode:storageMountPoint>/dev/sda1</hnode:storageMountPoint>
+    <hnode:storageSize>1000</hnode:storageSize>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vStorage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1">
+    <hnode:hNodeHost>hnode1.cloud</hnode:hNodeHost>
+    <hnode:hasVNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-3"/>
+    <hnode:freeMemory rdf:datatype="http://www.w3.org/2001/XMLSchema#int">992</hnode:freeMemory>
+    <hnode:hasVNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-2"/>
+    <hnode:hasPhysicalResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_physicalStorage"/>
+    <hnode:hasPhysicalResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_physicalNetwork"/>
+    <hnode:hasVNode rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_Dom-1"/>
+    <hnode:hNodeServicePort>5222</hnode:hNodeServicePort>
+    <hnode:freeLocalStorage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4992</hnode:freeLocalStorage>
+    <hnode:hNodeServicePwd>banana</hnode:hNodeServicePwd>
+    <hnode:hNodeServiceHost>service.hnode1.cloud</hnode:hNodeServiceHost>
+    <hnode:hasPhysicalResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_physicalCPU"/>
+    <hnode:hasPhysicalResource rdf:resource="http://pfc.org/semantic/schema/hnode#Server-1_physicalMemory"/>
+    <hnode:hNodeServiceJID>admin@hnode1.cloud/client</hnode:hNodeServiceJID>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#hNode"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-1_CPU">
+    <hnode:CPUCores>1</hnode:CPUCores>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vCPU"/>
+    <hnode:CPUClock rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2400</hnode:CPUClock>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#CPU">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://pfc.org/semantic/schema/hnode#physicalResource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#hNode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://pfc.org/semantic/schema/hnode#node"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#vMemory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://pfc.org/semantic/schema/hnode#memory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#freeLocalStorage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#hNode"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#storage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://pfc.org/semantic/schema/hnode#physicalResource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-2_CPU">
+    <hnode:CPUCores>1</hnode:CPUCores>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vCPU"/>
+    <hnode:CPUClock rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2400</hnode:CPUClock>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Cmd-Shutdown">
+    <hnode:commandName>Shutdown</hnode:commandName>
+    <hnode:commandTerminal>xe vm-shutdown vm=[VID] &amp;&amp; xe vm-list params=power-state uuid=[VID] --minimal</hnode:commandTerminal>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#command"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Command_Monitoring_Timestamp">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#commandMonitor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#host">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#vNetwork"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#network"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-3_CPU">
+    <hnode:CPUCores>1</hnode:CPUCores>
+    <hnode:CPUClock>1</hnode:CPUClock>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vCPU"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_physicalNetwork">
+    <hnode:host>10.1.1.10</hnode:host>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#network"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#hNodeServiceJID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#hNode"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#command">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-3_Storage">
+    <hnode:storageSize>1</hnode:storageSize>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vStorage"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#hNodeServicePwd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#vNodeID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#vNode"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#Server-1_Dom-2_Memory">
+    <hnode:memorySize>256</hnode:memorySize>
+    <rdf:type rdf:resource="http://pfc.org/semantic/schema/hnode#vMemory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#vNodeName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#vNode"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://pfc.org/semantic/schema/hnode#commandName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://pfc.org/semantic/schema/hnode#command"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,37 @@
+number of hnode
+Select count( distinct ?h) where {?h rdf:type hnode:hNode}
+number of vm
+Select count( distinct?vm) where {?vm rdf type hnode:vNode}
+number of vm for each hnode
+Select ?hnode count(distinct ?vnode) Where{ ?hnode rdf:type hnode:hNode.?hnode hnode:hasVNode ?vnode}
+average number of vm for hnode
+from above
+number of user
+Select count(?user) where {?user rdf:type datacenter:User}
+number of local user
+Select count(?user) where {?user rdf:type datacenter:User.?User datacenter:userType 'local'}
+number of remote user
+Select count(?user) where {?user rdf:type datacenter:User.?user datacenter:userType 'remote'}
+average number of vms for user
+Select ?user count(distinct ?vm) where{?user datacenter:hasContract ?vm}
+average number of vms for remote user
+Select ?user count(distinct ?vm) where{?user datacenter:hasContract ?vm.?user datacenter:userType 'remote'}
+average number of vms for local user
+Select ?user count(distinct ?vm) where{?user datacenter:hasContract ?vm.?user datacenter:userType 'local'}
+average ram of hnode
+Select ?vm ?ram Where{ ?vm hnode:hasVirtualResource ?vr.?vr rdf:type hnode:vMemory.?vr hnode:memorySize ?ram }
+average localStorage of hnode
+Select ?ls Where{?hnode rdf:type hnode:Hnode.?hnode hnode:hasPhysicalResource ?pr.?pr rdf:type hnode:storage.?pr hnode:storageSize ?ls}
+average cpu(cores and clock) of hnode
+
+minum localstorage space available
+
+maximum localstorage space available
+
+minum memory space available
+
+maximum memory space available
+
+typical vm - avarage vm memory - average vm localstorage -average vm cpu
+
+

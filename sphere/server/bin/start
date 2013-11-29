@@ -1,0 +1,47 @@
+#!/bin/sh
+ROOTDIR=/Applications/Dev/Jabber/server
+$ROOTDIR/bin/ejabberdctl start
+$ROOTDIR/bin/ejabberdctl started
+[ $? -eq 0 ] && {
+    page=start.html
+} || {
+    page=error.html
+}
+
+# List of possible X11 HTTP browser
+LIST_XBROWSERS="firefox konqueror galeon mozilla opera www-browser"
+# List of possible Console HTTP browser
+LIST_CBROWSERS="lynx links w3m"
+
+OS=`uname -s | tr A-Z a-z`
+
+case "$OS" in
+    darwin)
+	/usr/bin/open $ROOTDIR/doc/$page
+	;;
+    linux|*bsd)
+	if [ "$DISPLAY" != "" ] 
+	    then	
+	    for browser in $LIST_XBROWSERS
+	      do
+	      RUN=`which $browser`
+	      if [ $? -eq 0 ]
+		  then	
+		  $RUN $ROOTDIR/doc/$page >/dev/null 2>&1 &
+		  break
+	      fi
+	    done
+	else
+	    for browser in $LIST_CBROWSERS
+	      do
+	      RUN=`which $browser 2> /dev/null`
+	      if [ $? -eq 0 ]
+		  then
+		  $RUN $ROOTDIR/doc/$page
+		  break
+	      fi
+	    done
+	fi
+	;;
+esac
+

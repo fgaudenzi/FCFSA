@@ -1,0 +1,25 @@
+
+                             Mac OS X Notes
+                             ejabberd 2.1.0
+                            10 September 2010
+
+  ejabberd 2.1.0 installer comes with Preference Pane to start/stop ejabberd.
+
+  Preference Pane is installed in $HOME/Library/PreferencePanes/ejabberd.prefPane
+  It works on Tiger, but can not be displayed in Leopard's System Preference.
+
+  If you run Mac OS X >= 10.5.0 and need Preference Pane, you must open the 
+  Terminal application and type the following commands:
+
+    $ sudo -s
+    <type admin password>
+    $ cp -r $HOME/Library/PreferencePanes/ejabberd.prefPane /Library/PreferencePanes
+
+  note: you must copy (not move) the directory.
+
+  Bug reports
+
+  You can officially report bugs on ProcessOne support site:
+  http://support.process-one.net/
+
+END

@@ -1,0 +1,4 @@
+#!/bin/sh
+ROOTDIR=/Applications/Dev/Jabber/server
+$ROOTDIR/bin/ejabberdctl status
+

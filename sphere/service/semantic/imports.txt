@@ -1,0 +1,7 @@
+Path locale:
+
+file:/Users/filippogaudenzi/Universita/Tesi/sourceFromG/sphere/service/semantic/hnode.owl
+
+Path parallels:
+
+file://psf/Home/Universita/Tesi/sourceFromG/sphere/service/semantic/hnode.owl
